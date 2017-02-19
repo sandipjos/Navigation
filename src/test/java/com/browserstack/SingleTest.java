@@ -10,9 +10,10 @@ public class SingleTest extends BrowserStackJUnitTest {
 
   @Test
   public void test() throws Exception {
-    driver.get(baseUrl + "about:home");
     driver.findElement(By.id("searchText")).clear();
     driver.findElement(By.id("searchText")).sendKeys("test");
+    driver.findElement(By.id("searchSubmit")).click();
+    driver.findElement(By.id("yui_3_10_0_1_1487463576596_198")).click();
     //driver.findElement(By.id("searchSubmit")).click();
     //driver.findElement(By.id("yui_3_10_0_1_1487463576596_198")).click();
     //driver.findElement(By.xpath("//div/div[3]/form/div[2]/div[2]/div[1]/div[1]/div[3]/div/div/div[3]/div/input[1]")).click();
